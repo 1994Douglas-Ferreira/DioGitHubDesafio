@@ -1,0 +1,12 @@
+platformName
+deviceName
+automationName
+appPackage
+appActivity
+
+
+cd %android_home%\emulator
+
+emulator -list-avds
+
+emulator @deviceName

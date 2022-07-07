@@ -1,0 +1,10 @@
+Pegar coordenadas nas telas 
+public void tapByCoordinates(int x, int y) {
+new TouchAction(driver).tap(point(x, y)).waitAction(waitOptions(ofMillis(250))).perform();
+}
+tapByCoordinates(600, 300);
+
+WebDriverWait - Como fazer 
+
+WebDriverWait wait = new WebDriverWait(driver, 15);
+wait.until(ExpectedConditions.elementToBeClickable(digitoCinco));
