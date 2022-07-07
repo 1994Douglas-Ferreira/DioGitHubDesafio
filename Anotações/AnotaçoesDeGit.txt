@@ -1,0 +1,3 @@
+Git init (Inicia um repositorio git na pasta de destino)
+Git add . ( Adiciona um Comite )
+Git push ( Insere a atualização )
