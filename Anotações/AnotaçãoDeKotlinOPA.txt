@@ -1,4 +1,4 @@
-Operadores Aritmeticos
+OPERADORES ARITMÉTICOS
 
 
 Funcão	Expressão    Comando   Atribuição      
@@ -10,6 +10,75 @@ Funcão	Expressão    Comando   Atribuição
  resto      a%b       a.mod(b)     a%=b
 
 
-Os operadores podem ser chamados tanto como expressão quanto como comandos. O resultado será o mesmo
+• Os operadores podem ser chamados tanto como expressão quanto como comandos. O resultado será o mesmo
 
-A função de soma funciona também para concatenar Strings
+• A função de soma funciona também para concatenar Strings
+
+-----------------------------------------------------------------------
+
+OPERADORES COMPARATIVOS
+
+maior/menor	a > b OU a < b	a.compareTo(b) > 0 ou a.compareTo(b) < 0
+maior/menor igual	a >= b OU b <= a	a.compareTo(b) >= 0 ou a.compareTo(b) =< 0
+igual		a == b 		a.equals(b)
+diferente		a != b		!(a.equals(b))
+
+• Os comandos compareTo retornam os valores -1(menor Que), 0 (igual) ou 1 (maior). Já os operadores retornam valores booleanos;
+
+• O comando equals retorna um booleano
+
+Exemplos:
+const val MORE = 1
+const val LESS = -1
+const val EQUAL = 0
+
+//Funçao Principal
+fun main() {
+    var a = 38
+    var b = 4
+    println(a > b)
+    println(a.compareTo(b) == MORE)
+
+}
+
+-----------------------------------------------------------------------
+
+OPERADORES LÓGICOS
+
+E ( && )	(expressão1) AND (expressão2)
+OU( || )	(expressão1) OR (expressão2)
+
+• Quando utiliza-se o comando, é recomendado colocar a expressão entre parênteses
+
+~---------------------------------------------------------------------
+
+OPERADORES IN e RANGE 
+
+Contem (in)
+Não Contem (!in)
+Range/Faixa de valores (Int...Int) 
+
+• Se valor está presente em uma lista ou uma faixa (Range) de valores
+
+Exemplos :
+fun main() {
+ var number = listOf(3,9,0,1,2)
+ print(12 in number)
+// false
+
+print(12 in 0..20)
+//true
+}
+------------------------------
+const val MIN_AGE = 16
+const val MAX_AGE = 68
+
+//Funçao Principal
+fun main() {
+    var age = (10..100).random()
+    println(age)
+    println(age in MIN_AGE..MAX_AGE)
+    println(age >= MIN_AGE && age <= MAX_AGE)
+}
+
+-----------------------------------------------------------------------

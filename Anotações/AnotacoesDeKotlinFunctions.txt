@@ -1,0 +1,64 @@
+-----------------------------------------------------------------------
+
+INTRODUÇÃO A FUNCTIONS
+
+• Prefixo Fun nomeDaFuncao(nome:Tipo):TipoRetorno{}
+• Funçoes anônimas, single-line, inline, extensoes, lambdas and ordem superior
+
+Exemplos de uso :
+
+private fun getFullName(name:String, lastName:String):String{
+	val fullName = "$name $lastName"
+	return fullName
+}
+
+private fun getFullName(name:String, lastName:String):String{
+	return "$name $lastName"
+}
+
+private fun getFullName(name:String, lastName:String):String = "$name $lastName"
+
+-----------------------------------------------------------------------
+
+FUNÇÕES DE ORDEM SUPERIOR
+
+• Recebem outra function ou lambda por parâmetro;
+• Bastante úteis para a generalização de funções e tratamento de erros
+
+val x = calculate(12, 4 :: sum)
+val y = calculate(12, 4 {a , b -> a * b }
+
+fun main() {  
+val z:Int
+    
+    z = calculate(34, 90){a,b ->
+        print("Vamos multiplicar > ${a} * ${b} = ")
+        a*b}
+        println(z)
+   }
+
+fun sum(a1:Int, a2:Int) = a1.plus(a2)
+
+fun calculate(n1:Int, n2:Int, operation:(Int,Int) -> Int):Int{
+    val result = operation(n1,n2)
+    return result
+}
+
+-----------------------------------------------------------------------
+
+FUNÇÕES SINGLE-LINE E FUNÇOES/EXTENSÕES
+
+SINGLE-LINE
+• O prefixo Fun nomeDaFunction(nome:Tipo) = retorno;
+• Função de uma unica linha;
+• Infere o tipo de retorno
+
+private fun getFullName(name:String, lastName:String) = "$name $lastName
+
+FUNÇÕES/EXTENSÕES
+
+• Prefixo Fun tipo.nomeDaFuncao();
+• Cria uma função que só pode ser chamada por um tipo específico, cujo o valor pode ser referenciado dentro da função através da palavra THIS.
+
+fun String.radomCapitalizedLetter()=
+this[(0..this.length-1).random()].toUpperCase()

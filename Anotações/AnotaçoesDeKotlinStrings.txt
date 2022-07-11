@@ -1,0 +1,78 @@
+-----------------------------------------------------------------------
+• Strings possuem diversos métodos associados;
+• Indexação, concatenação, comparação e formatação;
+• Pode ser concatenada com o plus/+;
+• Também é tratada como um array de Char;
+
+-----------------------------------------------------------------------
+
+INDEXAÇÃO
+
+• String como array;
+• First(), last(), String.length, String[index];
+
+val s = "Olá, mundo!"
+
+println(s[0])
+println(s.first())
+//imprime O
+
+println(s[s.length -1])
+println(s.last())
+//imprime !
+
+-----------------------------------------------------------------------
+
+CONCATENAÇÃO
+
+• Para concatenar duas strings o plus/+ pode ser utilizado
+• Para concatenar uma variavel a uma string, os simbolos ${} devem ser inseridos
+•  .capitalize() - Torna a primeira letra da String maiuscula
+val name = "Ana"
+val s = "Olá"
+
+println(s + name)
+//imprime OláAna
+
+println("${s}, ${name}!")
+//imprime Olá, Ana!
+
+println("Bem vinda(o), $name!")
+//imprime Bem vinda(o), Ana!
+
+-----------------------------------------------------------------------
+
+FORMATAÇÃO
+
+Capitalização de Strings	Altera a formatação entre letras minuscula e maiuscula	capitalize(),toUpperCase(),toLowerCase(), and decapitalize()
+Remoção de espaços	Remove espaços vazios e caracteres inadequados para impressão	trimEnd(), trimStart() and trim()
+Substituição de caracteres	Substituir caracteres por outros			replace(x,y)
+Formatação 		Formatar outros valores para um padrão de string	"padrão${valor}".format(value)
+
+-----------------------------------------------------------------------
+
+EMPTY X BLANK
+
+• Metodos de comparação;
+• String está vazia, em branco ou é nula ?
+
+val s = ""
+println(s.isEmpty())
+//true
+
+println(s.isBlank())
+//true
+
+println(s.isNullOrBlank() || s.isNullOrEmpty())
+//true
+
+val s = "   "
+println(s.isEmpty())
+//false
+
+println(s.isBlank())
+//true
+
+• Se o tamanho da String (s.lenght) for 0 está empty ou blank 
+• Se o tamanho for > 0 mas todos os caracteres são espaços em branco está blank mas não empty
+
