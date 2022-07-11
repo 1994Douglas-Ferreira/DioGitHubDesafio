@@ -1,0 +1,21 @@
+Declaração de variaveis 
+
+var(camelCase) - Valor difinido e alterado durante a execução.
+
+val(camelCase) - Valor definido durante a execução (Constante não altera valor).
+
+const val(Snake_Case) - Valor definido durante a compilação, não pode ficar dentro de funções EX: (const val MIN_AGE = 16, const val MIN_AGE = 100).
+
+Uma Variavel não pode ser declarada sem tipo e sem atribuição.
+
+Uma variavel com inferencia de tipo só receberá valores do mesmo tipo que a sua primeira atribuição.
+
+Qualquer tipo pode ser nulo porém isso deve ser explicitado na declaração de variável através do uso da interrogação (?)
+
+A inferência de tipo não atribui nullability 
+
+EX: var month:Int? = null
+//Atribui valor null corretamente a month
+
+EX2: var day:Int = null
+//Erro de compilação
