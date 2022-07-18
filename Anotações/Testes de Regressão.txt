@@ -1,0 +1,3 @@
+• O teste de regressão é um tipo de teste no qual os casos de teste são executados novamentepara verificar se a funcionalidade anterior do aplicativo está funcionando bem e as novas alterações não introduziram bugs.
+• Os casos de teste geralmente são automatizados, pois precisam ser executados repetidamente e executar os mesmos casos de teste novamente.
+• O reteste é feito para os casos de teste que falham durante a execução e o bug criado para o mesmo foi corrigido. Enquanto o teste de regressão não se limita à correção do bug, pois abrange outros casos de teste, também para garantir que a correção do bug não impactou qualquer outra funcionalidade do produto

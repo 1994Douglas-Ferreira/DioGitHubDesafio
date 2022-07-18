@@ -1,0 +1,76 @@
+-----------------------------------------------------------------------
+
+REPETIÇÃO
+
+• While, do..While, for e forEach;
+• Estruturas similares às convencionais em outras linguagens;
+• Aceita os comandos in, range, until, downTo e step
+
+while( Condição ) { }
+
+do{ //bloco } while(Condição)
+
+for(i in 0..20 step 2) { println(i) }
+
+-----------------------------------------------------------------------
+
+FOR 
+
+•FOR (VariavelIndexadora in/until/donwTo faixa de valores/condicional step intervalo);
+
+•IN: Conta do valor inicial até o valor final estabelecido;
+
+for (i in 0..20 step 2){ println(i) } - Conta do 0 ao 20 de 2 em 2
+
+•UNTIL: Conta do valor atual até o valor estabelecido menos 1;
+
+for (i in 0 until 10){ println(i) } - Conta do 1 ao 9
+
+•DOWNTO: Conta de maneira decrescente;
+
+for (i in 10 downTo 0){ println(i) } - Conta do 10 ao 0
+
+•STEP: Determina o intervalo da contagem;
+
+var text = "Kotlin"
+
+for(letter in text){ println(letter) } - Imprime todas as letras da palavra uma a uma 
+
+-----------------------------------------------------------------------
+
+EXEMPLOS:
+
+//Funçao Principal
+fun main() {	
+    letters()
+}
+fun downTo(){
+    for(i in 20 downTo 0){
+    	print("$i ")   
+    }
+}
+
+fun until(){
+    for(i in 1 until 20){
+    	print("$i ")   
+    }
+}
+
+fun step(num:Int){
+    for(i in 0..20 step num){
+    	print("$i ")    
+    }
+}
+
+fun letters(){
+   	val sArray = "Olha essa String"
+    sArray.forEach{letter->
+            print(letter + "")
+            
+        }   
+    
+    //for(letter in sArray){
+    	//print(letter.toUpperCase()) 
+    	
+    //}
+}

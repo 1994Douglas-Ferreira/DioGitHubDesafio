@@ -1,0 +1,3 @@
+O conceito de dataClass é armazenar dados que uma vez inicializado não se pode muda-los, mas se pode copia-los
+a ideia é criar algo mas não alterar ! Se cria objetos onde teremos dados mas eles serão imutaveis, se pode usa-los
+mas não altera-los

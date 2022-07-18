@@ -49,3 +49,68 @@ val minValue = if(a > b){
 }else{
 	println("os valores são iguais")
 }
+
+-----------------------------------------------------------------------
+
+WHEN 
+
+• Equivalente ao switch de outras linguagens;
+• Aceita tanto valores quanto condicionais;
+• Aceita range como case 
+
+when{
+	a > b -> {}
+	a != b && a > c -> {}
+	b == 0 -> {}
+	else -> {}
+}
+
+when(year){
+	-4000 .. 475 -> //Antiguidade
+	476 .. 1452 -> //Medieval
+	1453 .. 1783 -> //Moderna
+	currentYear -> //Ano atual
+}
+
+-----------------------------------------------------------------------
+
+ELVIS OPERATOR
+
+• O mais proximo que a linguagem possui de um operador ternario;
+• Verifica se um valor é nulo e apresenta uma opção caso seja;
+• Pode ser encadeado
+
+val a:Int? = null
+val c:Int? = 9
+
+var number = a?: b?: 0 
+
+Nesse caso, se o valor de a não for nulo, number recebe a. Se o valor de aa for nulo e b não for nulo, number recebe b, se a e b forem nulos number recebe 0 
+
+
+Exemplos:
+
+fun main() {
+	val grade = (0..10).random()
+    println(grade.getStudentStatus())
+	
+    
+    var x:Int? = 8
+    var w:Int? = null
+    var t:String = x?.getStudentStatus()?: ""
+   
+    
+    println(t)
+
+} 
+
+fun Int.getStudentStatus():String{
+    println("nota $this")
+    return when(this){
+        in 0..4 -> "Reprovado"
+        in 5..7 -> "Mediano"
+        in 8..9 -> "Bom"
+        10 -> "Excelente"
+        else -> "Indefinido"
+    }
+}
